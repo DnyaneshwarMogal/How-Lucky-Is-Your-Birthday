@@ -4,6 +4,9 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Nunito", sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 html {
@@ -12,6 +15,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
 }
 
 #alertBox {
@@ -103,4 +107,8 @@ h3 {
   padding-bottom: 1.5rem;
   text-align: center;
   color: black;
+}
+
+footer {
+  margin-top: auto;
 }
