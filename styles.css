@@ -1,7 +1,106 @@
+body {
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
 html {
   background: url(/images/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+#alertBox {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem auto;
+  background-color: #93c5fd;
+}
+
+header h1 {
+  text-align: center;
+  margin: 1rem;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+input {
+  padding: 0.6rem 1rem;
+  margin: 1rem auto;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 150px;
+  text-align: center;
+}
+
+#btn {
+  background: black;
+  border: none;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  font-size: large;
+  cursor: pointer;
+  outline: #fff;
+  margin: auto;
+  display: block;
+}
+
+#output {
+  font-size: x-large;
+  font-weight: 600;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+img {
+  max-width: 250px;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+#date-of-birth {
+  margin: 1rem;
+}
+
+#lucky-number {
+  margin: 1rem;
+}
+
+#footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0px;
+}
+#footer li {
+  list-style: none;
+  padding: 1.5rem 1rem 1rem;
+  font-size: 1.1rem;
+}
+
+.legacyText {
+  font-size: 0.8rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  color: black;
 }

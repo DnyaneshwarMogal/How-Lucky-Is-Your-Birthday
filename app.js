@@ -1,21 +1,43 @@
 const dateOfBirth = document.querySelector("#date-of-birth");
 const luckyNumber = document.querySelector("#lucky-number");
 const btn = document.querySelector("#btn");
-const outputBox = document.querySelector("#output-box");
+const output = document.querySelector("#output");
+
+const alertCloseIcon = document.querySelector("#crossIcon");
+const alertBoxDiv = document.querySelector("#alertBox");
+
+alertCloseIcon.addEventListener("click", (e) => {
+  alertBoxDiv.style.display = "none";
+});
+
+btn.addEventListener("click", checkLuckyBirthday);
+
+const imgHappy = document.createElement("img");
+imgHappy.src = "/images/happy.jpg";
+const imgSad = document.createElement("img");
+imgSad.src = "/images/sad.jpg";
+const imgAngry = document.createElement("img");
+imgAngry.src = "/images/angry.jpg";
 
 function compareValues(sum, luckyNumber) {
   if (sum % luckyNumber === 0) {
-    outputBox.innerText = "Your birthday is lucky 🚀";
+    output.innerHTML = "Your birthday is lucky 🚀<br><br>";
+    document.querySelector("#output").appendChild(imgHappy);
   } else {
-    outputBox.innerText = "Your birthday is not lucky 🤒";
+    output.innerHTML = "Your birthday is not lucky 🤒<br><br>";
+    document.querySelector("#output").appendChild(imgSad);
   }
 }
 
 function checkLuckyBirthday() {
   const birthDate = dateOfBirth.value;
   const sum = calculateSum(birthDate);
-  if (sum && birthDate) compareValues(sum, luckyNumber.value);
-  else outputBox.innerText = "Please enter both the fields 😡";
+  if (sum && birthDate) {
+    compareValues(sum, luckyNumber.value);
+  } else {
+    output.innerHTML = "Please enter both the fields 😡<br><br>";
+    document.querySelector("#output").appendChild(imgAngry);
+  }
 }
 
 function calculateSum(birthDate) {
@@ -26,5 +48,3 @@ function calculateSum(birthDate) {
   }
   return sum;
 }
-
-btn.addEventListener("click", checkLuckyBirthday);
