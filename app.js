@@ -20,7 +20,10 @@ const imgAngry = document.createElement("img");
 imgAngry.src = "/images/angry.jpg";
 
 function compareValues(sum, luckyNumber) {
-  if (sum % luckyNumber === 0) {
+  if (luckyNumber === "") {
+    output.innerHTML = "Please Enter Lucky Number 😡<br><br>";
+    document.querySelector("#output").appendChild(imgAngry);
+  } else if (sum % luckyNumber === 0) {
     output.innerHTML = "Your birthday is lucky 🚀<br><br>";
     document.querySelector("#output").appendChild(imgHappy);
   } else {
@@ -35,7 +38,7 @@ function checkLuckyBirthday() {
   if (sum && birthDate) {
     compareValues(sum, luckyNumber.value);
   } else {
-    output.innerHTML = "Please enter both the fields 😡<br><br>";
+    output.innerHTML = "Please enter BirthDate 😡<br><br>";
     document.querySelector("#output").appendChild(imgAngry);
   }
 }
