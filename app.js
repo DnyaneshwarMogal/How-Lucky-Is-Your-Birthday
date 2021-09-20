@@ -1,11 +1,21 @@
 const dateOfBirth = document.querySelector("#date-of-birth");
 const luckyNumber = document.querySelector("#lucky-number");
 const btn = document.querySelector("#btn");
+const outputBox = document.querySelector("#output-box");
+
+function compareValues(sum, luckyNumber) {
+  if (sum % luckyNumber === 0) {
+    outputBox.innerText = "Your birthday is lucky 🚀";
+  } else {
+    outputBox.innerText = "Your birthday is not lucky 🤒";
+  }
+}
 
 function checkLuckyBirthday() {
   const birthDate = dateOfBirth.value;
   const sum = calculateSum(birthDate);
-  console.log(sum);
+  if (sum && birthDate) compareValues(sum, luckyNumber.value);
+  else outputBox.innerText = "Please enter both the fields 😡";
 }
 
 function calculateSum(birthDate) {
