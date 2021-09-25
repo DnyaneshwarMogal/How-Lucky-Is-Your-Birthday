@@ -88,6 +88,8 @@ h3 {
   margin: 1rem;
 }
 
+/* footer */
+
 #footer ul {
   display: flex;
   justify-content: center;
@@ -100,6 +102,10 @@ h3 {
   list-style: none;
   padding: 1.5rem 1rem 1rem;
   font-size: 1.1rem;
+}
+
+i {
+  color: black;
 }
 
 .legacyText {
